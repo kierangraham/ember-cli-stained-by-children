@@ -55,9 +55,9 @@ export default Mixin.create({
               return (
                 related.isAny('hasDirtyAttributes', true)
                 || (
-                  related.canonicalState.length !== related.currentState.length
-                  && Ember.A(related.canonicalState).any((e, i) => {
-                    return e === related.currentState[i];
+                  related.content.canonicalState.length !== related.content.currentState.length
+                  && Ember.A(related.content.canonicalState).any((e, i) => {
+                    return e === related.content.currentState[i];
                   })
                 )
               );
